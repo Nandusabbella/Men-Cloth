@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManGo - Men's Fashion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="#home">
+                <img src="https://img.freepik.com/premium-vector/mens-clothing-store-logo-design_1275330-379.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="ManGo Logo" class="logo">
+            </a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search for products..." class="search-input">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#sale">Sale</a></li>
+                <li><a href="#cart"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="categories" id="categories">
+            <h2>Shop By Category</h2>
+            <div class="category-grid">
+                <div class="category-card" onclick="showCategory('tshirts')">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>T-Shirts</h3>
+                </div>
+                <div class="category-card" onclick="showCategory('shirts')">
+                    <i class="fas fa-vest"></i>
+                    <h3>Shirts</h3>
+                </div>
+                <div class="category-card" onclick="showCategory('jeans')">
+                    <i class="fas fa-socks"></i>
+                    <h3>Jeans</h3>
+                </div>
+                <div class="category-card" onclick="showCategory('watches')">
+                    <i class="far fa-clock"></i>
+                    <h3>Watches</h3>
+                </div>
+                <div class="category-card" onclick="showCategory('sunglasses')">
+                    <i class="fas fa-glasses"></i>
+                    <h3>Sunglasses</h3>
+                </div>
+                <div class="category-card" onclick="showCategory('nightwear')">
+                    <i class="fas fa-moon"></i>
+                    <h3>Nightwear</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="filters">
+                <h3>Filters</h3>
+                <div class="price-filter">
+                    <h4>Price Range</h4>
+                    <input type="range" min="0" max="1000" value="500" class="price-slider">
+                    <div class="price-values">
+                        <span>$0</span>
+                        <span>$1000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-grid" id="tshirts">
+                <h2>T-Shirts</h2>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/portrait-young-man-wearing-sunglasses-standing-outdoors_1048944-5328426.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Classic White T-Shirt">
+                    <h3>Classic White T-Shirt</h3>
+                    <p>$29.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/portrait-young-man-standing-outdoors_1048944-7395114.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Black Essential Tee">
+                    <h3>Black Essential Tee</h3>
+                    <p>$24.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/portrait-young-couple-yellow_158595-5536.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Navy Crew Neck">
+                    <h3>Navy Crew Neck</h3>
+                    <p>$27.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/portrait-young-man-wearing-sunglasses-standing-outdoors_1048944-30547345.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Gray V-Neck">
+                    <h3>Gray V-Neck</h3>
+                    <p>$22.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/male-youngster-with-crisp-dark-hair-points-casual-t-shirt-shows-free-space-your-logo-advertisement-isolated-white-concrete-wall-people-clothing-design-concept_176532-9035.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Striped Tee">
+                    <h3>Striped Tee</h3>
+                    <p>$34.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/confident-young-handsome-guy-wearing-black-t-shirt-points-side-isolated-white-wall-with-copy-space_141793-103364.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Red Polo">
+                    <h3>Red Polo</h3>
+                    <p>$39.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/portrait-handsome-stylish-man-color-surface_392895-11076.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Green Henley">
+                    <h3>Green Henley</h3>
+                    <p>$32.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/brotherhood-males-walking-streets_23-2148289211.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Blue Pocket Tee">
+                    <h3>Blue Pocket Tee</h3>
+                    <p>$26.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/portrait-happy-gay-couple-spending-time-together-hugging-street_58466-11434.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Yellow Basic Tee">
+                    <h3>Yellow Basic Tee</h3>
+                    <p>$21.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/handsome-young-guy-posing-studio-isolated_485089-111.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Purple V-Neck">
+                    <h3>Purple V-Neck</h3>
+                    <p>$25.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/young-boy-with-curly-hairs-makes-agressive-face_114579-17375.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Orange Crew Neck">
+                    <h3>Orange Crew Neck</h3>
+                    <p>$23.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/cheerful-young-man-nightclub_158595-4880.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Pink Basic Tee">
+                    <h3>Pink Basic Tee</h3>
+                    <p>$24.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/portrait-young-man-standing-against-gray-background_1048944-18561875.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Brown Henley">
+                    <h3>Brown Henley</h3>
+                    <p>$31.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/young-man-showing-ok-gesture_140725-36737.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Maroon V-Neck">
+                    <h3>Maroon V-Neck</h3>
+                    <p>$28.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/young-handsome-student-wearing-t-shirt-indian-pakistani-model_561639-3306.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Teal Crew Neck">
+                    <h3>Teal Crew Neck</h3>
+                    <p>$26.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/pleased-young-sporty-man-wearing-headband-wristband-spreading-hands-isolated-green-background_141793-72447.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Olive Basic Tee">
+                    <h3>Olive Basic Tee</h3>
+                    <p>$25.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/two-men-hugging-friendship-communication-lifestyle-fun_163305-188919.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Burgundy Polo">
+                    <h3>Burgundy Polo</h3>
+                    <p>$37.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/stylish-casual-indian-man-wear-blue-tshirt-posing-against-grey-wall_627829-4727.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Charcoal V-Neck">
+                    <h3>Charcoal V-Neck</h3>
+                    <p>$27.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.imgur.com/LmVRZqY.jpg" alt="Navy Polo">
+                    <h3>Navy Polo</h3>
+                    <p>$36.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/young-man-with-pink-black-hair-red-shirt-dark-blue-background_181667-5207.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="White V-Neck">
+                    <h3>White V-Neck</h3>
+                    <p>$23.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-grid" id="shirts">
+                <h2>Shirts</h2>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/basic-green-shirt-men-rsquo-s-fashion-apparel-studio-shoot_53876-101197.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Blue Oxford Shirt">
+                    <h3>Blue Oxford Shirt</h3>
+                    <p>$59.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/portrait-young-latin-man-wearing-summer-clothes-listening-music-with-earphones-against-yellow-space_58466-11968.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="White Dress Shirt">
+                    <h3>White Dress Shirt</h3>
+                    <p>$54.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/man-wearing-black-shirt-portrait_133748-6701.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Checkered Casual Shirt">
+                    <h3>Checkered Casual Shirt</h3>
+                    <p>$49.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/university-student-listening-audio-courses-headphones-serious-guy-learning-by-listening_474717-157100.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Striped Business Shirt">
+                    <h3>Striped Business Shirt</h3>
+                    <p>$64.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/style-everyday-mens-casual-shirt-photoshoot-poses-boys-shirt_463958-118.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Pink Oxford Shirt">
+                    <h3>Pink Oxford Shirt</h3>
+                    <p>$57.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/portraits-model_1048944-2489408.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Denim Shirt">
+                    <h3>Denim Shirt</h3>
+                    <p>$69.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/casually-handsome-handsome-young-man-casual-shirt-holding-hands-pockets-looking-camera-while-standing-isolated-white_425904-36459.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Gray Business Shirt">
+                    <h3>Gray Business Shirt</h3>
+                    <p>$62.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/fashion-portrait-young-caucasian-man-handsome-model-casual-clothes-posing-studio-attractive-male_158538-13685.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Black Dress Shirt">
+                    <h3>Black Dress Shirt</h3>
+                    <p>$59.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/confident-hipster-looking-away-while-standing_13339-191662.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Purple Dress Shirt">
+                    <h3>Purple Dress Shirt</h3>
+                    <p>$56.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/style-everyday-mens-casual-shirt-photoshoot-poses-boys-shirt_463958-99.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Orange Casual Shirt">
+                    <h3>Orange Casual Shirt</h3>
+                    <p>$52.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-grid" id="jeans">
+                <h2>Jeans</h2>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/jeans_1203-8093.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Slim Fit Jeans">
+                    <h3>Slim Fit Jeans</h3>
+                    <p>$79.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/close-up-stylish-traveler-jeans_23-2148357267.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Slim Fit Jeans">
+                    <h3>Slim Fit Jeans</h3>
+                    <p>$79.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/premium-photo/low-section-man-standing-railing_1048944-25634219.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Slim Fit Jeans">
+                    <h3>Slim Fit Jeans</h3>
+                    <p>$79.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                
+            </div>
+
+            <div class="product-grid" id="watches">
+                <h2>Watches</h2>
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/stylish-golden-watch-white-surface_181624-27078.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Classic Chronograph">
+                    <h3>Classic Chronograph</h3>
+                    <p>$199.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                
+            </div>
+
+            <div class="product-grid" id="sunglasses">
+                <h2>Sunglasses</h2>
+                
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/young-man-holding-his-fashionable-sunglasses_1098-988.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Aviator Sunglasses">
+                    <h3>Aviator Sunglasses</h3>
+                    <p>$149.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                
+            </div>
+
+            <div class="product-grid" id="nightwear">
+                <h2>Nightwear</h2>
+                
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/portrait-man-eating-food-morning-breakfast-sitting-kitchen-counter_23-2148195294.jpg?ga=GA1.1.545689671.1728572671&semt=ais_hybrid&w=740" alt="Cotton Pajama Set">
+                    <h3>Cotton Pajama Set</h3>
+                    <p>$49.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About ManGo</h3>
+                <p>Your ultimate destination for men's fashion.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: contact@mango.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ManGo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showCategory(categoryId) {
+            // Hide all product grids
+            document.querySelectorAll('.product-grid').forEach(grid => {
+                grid.style.display = 'none';
+            });
+            // Show selected category
+            document.getElementById(categoryId).style.display = 'grid';
+        }
+
+        // Show T-shirts by default
+        document.addEventListener('DOMContentLoaded', () => {
+            showCategory('tshirts');
+        });
+    </script>
+</body>
+</html>
